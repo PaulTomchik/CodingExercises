@@ -34,12 +34,15 @@ void isPermutation_test() {
 void replaceSpaces_test() {
   char str1[] = "A B C\0   ";
   char str2[] = "ABC\0   ";
+  char str3[] = "This is not a sentence.\0       ";
 
   replaceSpaces(str1, 9);
   replaceSpaces(str2, 3);
+  replaceSpaces(str3, 31);
 
   assert(strcmp(str1, "A%20B%20C") == 0);
   assert(strcmp(str2, "ABC") == 0);
+  assert(strcmp(str3, "This%20is%20not%20a%20sentence.") == 0);
 }
 
 void compressString_test() {

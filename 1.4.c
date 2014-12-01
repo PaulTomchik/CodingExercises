@@ -1,11 +1,12 @@
 # include <string.h>
+# include <stdio.h>
 
 void replaceSpaces(char *str, int trueLen) {
   
   char *c1, *c2, c;
 
-  c1 = str + strlen(str) -1;
-  c2 = (str + trueLen -1);
+  c1 = str + strlen(str);
+  c2 = (str + trueLen);
   
   while (c1 >= str) {
     c = *(c1--);
