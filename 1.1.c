@@ -12,14 +12,19 @@ int hasAllUniqueChars(char *str) {
   for (i=0; i < strlen(str); ++i) {
     c = toupper(str[i]);
     if (c >= 'A' && c <= 'Z') {
-      if (++tally[c - 'A'] > 1) return 0;
+      if (++tally[c - 'A'] > 1) {
+        free(tally); 
+        return 0;
+      }
     }
   }
 
+  free(tally);
   return 1;
 }
 
 
+/* This one SegFaults. Have to figure out why. */
 int hasAllUniqueChars_inPlace(char *str) {
   
   int len = strlen(str);

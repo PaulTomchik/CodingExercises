@@ -18,13 +18,20 @@ int isPermutation(char *strA, char *strB) {
   for (i=0; i < strlen(strB); ++i) {
     c = toupper(strB[i]);
     if (c >= 'A' && c <= 'Z') {
-      if (--tally[c - 'A'] < 0) return 0; 
+      if (--tally[c - 'A'] < 0) {
+        free(tally);
+        return 0;
+      }
     }
   }
   
   for (i=0; i < 26; ++i) {
-    if (tally[i]) return 0;
+    if (tally[i]) {
+      free(tally);
+      return 0;
+    }
   }
 
+  free(tally);
   return 1;
 }
