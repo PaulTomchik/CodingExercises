@@ -35,4 +35,5 @@ void compressString(char *str) {
   *cur = '\0';
 
   strcpy(str, compressed);
+  free(compressed);
 }
