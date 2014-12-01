@@ -31,8 +31,8 @@ void compressString(char *str) {
     }
 
     c = str[i];
-    *cur = '\0';
   }
+  *cur = '\0';
 
   strcpy(str, compressed);
 }
