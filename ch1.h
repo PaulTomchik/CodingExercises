@@ -17,4 +17,10 @@ void replaceSpaces(char *str, int trueLen);
 
 void compressString(char *str);
 
+
+void zeroRowsAndColumnsIfMemberZero(int *matrix, int m, int n);
+
+
+void rotate90Degrees(char matrix[], int n);
+
 # endif
