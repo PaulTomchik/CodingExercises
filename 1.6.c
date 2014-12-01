@@ -1,6 +1,6 @@
 void rotate90Degrees(char matrix[], int n) {
   
-  char temp1, temp2;
+  char temp;
   char *tR, *rC, *bR, *lC, *done;
   int i;
 
@@ -14,16 +14,12 @@ void rotate90Degrees(char matrix[], int n) {
     if (tR >= done) break;
 
     while(tR != done) {
-      temp1 = *rC;
-      *rC   = *tR;
+      temp = *rC;
 
-      temp2 = *bR;
-      *bR   = temp1;
-
-      temp1 = *lC;
-      *lC   = temp2;
-
-      *tR   = temp1;
+      *rC = *tR;
+      *tR = *lC;
+      *lC = *bR;
+      *bR = temp;
 
       ++tR;
       rC += n;
