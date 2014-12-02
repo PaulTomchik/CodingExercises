@@ -125,11 +125,25 @@ void areRotations_test() {
   char str5[] = "11211221";
   char str6[] = "11211121";
 
+  char str7[] = "ississippim";
+  char str8[] = "issippimiss";
+  char str9[] = "ssissippimi";
+
   assert(areRotations(str1, str1));
   assert(areRotations(str1, str2));
+
   assert(areRotations(str3, str4));
   assert(!areRotations(str3, str5));
-  assert(areRotations(str1, str6));
+
+  assert(!areRotations(str1, str6));
+
+  assert(areRotations(str7, str8));
+  assert(areRotations(str7, str9));
+  assert(areRotations(str8, str9));
+  assert(areRotations(str8, str7));
+  assert(areRotations(str9, str9));
+  assert(areRotations(str9, str8));
+  assert(areRotations(str9, str9));
 }
 
 int main (void) {
