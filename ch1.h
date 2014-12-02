@@ -23,4 +23,8 @@ void zeroRowsAndColumnsIfMemberZero(int *matrix, int m, int n);
 
 void rotate90Degrees(char matrix[], int n);
 
+
+int areRotations (char str1[], char str2[]);
+
+
 # endif

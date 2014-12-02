@@ -115,6 +115,23 @@ void rotate90Degrees_test() {
   assert(matrix3[8] == 3);
 }
 
+void areRotations_test() {
+
+  char str1[] = "obarfo";
+  char str2[] = "foobar";
+
+  char str3[] = "11211121";
+  char str4[] = "12111211";
+  char str5[] = "11211221";
+  char str6[] = "11211121";
+
+  assert(areRotations(str1, str1));
+  assert(areRotations(str1, str2));
+  assert(areRotations(str3, str4));
+  assert(!areRotations(str3, str5));
+  assert(areRotations(str1, str6));
+}
+
 int main (void) {
   hasAllUniqueChars_test();
   /*hasAllUniqueChars_inPlace_test();*/ // SegFaulting
