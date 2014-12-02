@@ -129,6 +129,9 @@ void areRotations_test() {
   char str8[] = "issippimiss";
   char str9[] = "ssissippimi";
 
+  char str10[] = "1010010";
+  char str11[] = "1010100";
+
   assert(areRotations(str1, str1));
   assert(areRotations(str1, str2));
 
@@ -144,6 +147,8 @@ void areRotations_test() {
   assert(areRotations(str9, str9));
   assert(areRotations(str9, str8));
   assert(areRotations(str9, str9));
+
+  assert(areRotations(str10, str11));
 }
 
 int main (void) {
@@ -155,6 +160,7 @@ int main (void) {
   compressString_test();
   zeroRowsAndColumnsIfMemberZero_test();
   rotate90Degrees_test();
+  areRotations_test();
 
   return 0;
 }
