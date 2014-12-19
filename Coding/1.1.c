@@ -1,3 +1,9 @@
+/*
+
+ Determine if a string has all unique characters.
+ 
+ */
+
 # include <ctype.h>
 # include <stdlib.h>
 # include <string.h>

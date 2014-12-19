@@ -1,3 +1,9 @@
+/*
+
+ Reverse a null-terminated string.
+ 
+ */
+
 # include <string.h>
 
 

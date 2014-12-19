@@ -1,3 +1,9 @@
+/*
+
+  Determine if one string is a permutation of the other.
+
+ */
+
 # include <stdlib.h>
 # include <ctype.h>
 # include <string.h>
